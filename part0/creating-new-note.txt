@@ -1,0 +1,24 @@
+title Creating a new note (HTTP POST)
+
+note over Browser
+Save button is clicked
+end note
+Browser->Server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/notes \nform-data: new note text
+note over Server: persists the new note \nwith timestamp
+Server-->Browser: HTTP Status Code 302 (Redirect)
+Browser->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+Server-->Browser: HTML-Code
+Browser->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+Server-->Browser: main.css
+Browser->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
+Server-->Browser: main.js
+note over Browser: 
+browser starts executing js-code
+that requests JSON data from server 
+end note
+Browser->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+Server-->Browser: [{{content: "hmmmmmmmmmm", date: "2020-12-02T18:19:55.969Z"}},...]
+note over Browser:
+Browser executes the event handler
+that renders notes to display
+end note
