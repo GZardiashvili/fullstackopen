@@ -1,8 +1,0 @@
-{
-  "countries": [
-    { "name": "Georgia", "id": "1" },
-    { "name": "America", "id": "2" },
-    { "name": "Finland", "id": "3" },
-    { "name": "France", "id": "4" }
-  ]
-}
